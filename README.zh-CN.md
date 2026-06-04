@@ -1,12 +1,10 @@
-[English Version](./README.en.md)
+![English Version](./README.en.md)
 ![四六级 Skill](https://img.shields.io/badge/四六级-Skill-10a37f)
 ![作文批改](https://img.shields.io/badge/写作-作文批改-orange)
 ![翻译纠错](https://img.shields.io/badge/翻译-中式英语纠错-yellow)
 ![阅读听力](https://img.shields.io/badge/阅读%2F听力-答案解析-informational)
 ![真题趋势](https://img.shields.io/badge/趋势-2015--2025真题分析-purple)
 # CET Skill｜基于 2015–2025 四六级真题趋势的原创训练教练
-
-
 CET Skill 是一个面向大学英语四、六级备考的智能学习 Skill。它的核心是基于 **Codex 对 2015–2025 年全部 CET-4 / CET-6 真题材料的逐份审计与结构化分析**，提炼出写作、翻译、阅读、听力四大模块的题型结构、主题趋势、难度差异、干扰项逻辑和评分规则，再由 AI 生成全新的原创 CET-style 训练题。
 
 换句话说，它不是让 AI 背真题，而是让 AI 学会“四六级如何出题、如何评分、学生如何提升”。
