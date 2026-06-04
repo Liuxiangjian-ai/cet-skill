@@ -1,13 +1,13 @@
-![CET-4/6](https://img.shields.io/badge/CET--4%20%7C%20CET--6-English%20Learning-blue)
-![Original Practice](https://img.shields.io/badge/Practice-Original%20CET--style-orange)
-![Copyright Safe](https://img.shields.io/badge/Copyright-Safe%20Distillation-brightgreen)
-![Codex Audit](https://img.shields.io/badge/Codex-2015--2025%20Audit-purple)
-![Chinese README](https://img.shields.io/badge/README-中文%20%7C%20English-lightgrey)
+[English Version](./README.en.md)
+![四六级 Skill](https://img.shields.io/badge/四六级-Skill-10a37f)
+![作文批改](https://img.shields.io/badge/写作-作文批改-orange)
+![翻译纠错](https://img.shields.io/badge/翻译-中式英语纠错-yellow)
+![阅读听力](https://img.shields.io/badge/阅读%2F听力-答案解析-informational)
+![真题趋势](https://img.shields.io/badge/趋势-2015--2025真题分析-purple)
 # CET Skill｜基于 2015–2025 四六级真题趋势的原创训练教练
 
-> 不搬运真题，不复刻答案。把十年四六级的命题规律，转化成可训练、可批改、可复盘的 AI 学习工作流。
 
-CET Skill 是一个面向大学英语四、六级备考的智能学习 Skill。它的核心不是“堆题库”，而是基于 **Codex 对 2015–2025 年全部 CET-4 / CET-6 真题材料的逐份审计与结构化分析**，提炼出写作、翻译、阅读、听力四大模块的题型结构、主题趋势、难度差异、干扰项逻辑和评分规则，再由 AI 生成全新的原创 CET-style 训练题。
+CET Skill 是一个面向大学英语四、六级备考的智能学习 Skill。它的核心是基于 **Codex 对 2015–2025 年全部 CET-4 / CET-6 真题材料的逐份审计与结构化分析**，提炼出写作、翻译、阅读、听力四大模块的题型结构、主题趋势、难度差异、干扰项逻辑和评分规则，再由 AI 生成全新的原创 CET-style 训练题。
 
 换句话说，它不是让 AI 背真题，而是让 AI 学会“四六级如何出题、如何评分、学生如何提升”。
 
