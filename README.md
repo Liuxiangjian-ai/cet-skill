@@ -1,37 +1,173 @@
-# CET Skill
+![四六级 Skill](https://img.shields.io/badge/四六级-Skill-10a37f)
+![作文批改](https://img.shields.io/badge/写作-作文批改-orange)
+![翻译纠错](https://img.shields.io/badge/翻译-中式英语纠错-yellow)
+![阅读听力](https://img.shields.io/badge/阅读%2F听力-答案解析-informational)
+![真题趋势](https://img.shields.io/badge/趋势-2015--2025真题分析-purple)
+# CET Skill｜基于 2015–2025 四六级真题趋势的原创训练教练
+CET Skill 是一个面向大学英语四、六级备考的智能学习 Skill。它的核心是基于 **Codex 对 2015–2025 年全部 CET-4 / CET-6 真题材料的逐份审计与结构化分析**，提炼出写作、翻译、阅读、听力四大模块的题型结构、主题趋势、难度差异、干扰项逻辑和评分规则，再由 AI 生成全新的原创 CET-style 训练题。
 
-A ChatGPT skill for CET-4 and CET-6 preparation. It provides original CET-style practice, writing correction, translation feedback, reading/listening explanations, and personalized study planning.
+换句话说，它不是让 AI 背真题，而是让 AI 学会“四六级如何出题、如何评分、学生如何提升”。
 
-## What It Does
+## 为什么做这个 Skill？
 
-CET Skill is designed as a study workflow rather than a past-paper database.
+普通四六级资料往往解决的是“我还有哪些题没刷”。
 
-It can:
+但很多学生真正缺的是：
 
-- ask whether the user is preparing for CET-4 or CET-6;
-- route the user to writing, translation, reading, listening, or study planning;
-- generate original CET-style tasks;
-- delay answer reveal until the user responds;
-- score and revise essays;
-- correct translations and explain Chinglish issues;
-- diagnose reading/listening error patterns;
-- create study plans based on score goals and time constraints.
+- 不知道自己为什么错；
+- 作文只会套模板，但不知道哪里扣分；
+- 翻译看了答案也学不会表达迁移；
+- 阅读错题只记住答案，没总结干扰项套路；
+- 听力听不懂，不知道是词汇、定位、转折还是推理出了问题；
+- 复习计划看起来很努力，但没有针对性。
 
-## Copyright-Safe Design
+这个 Skill 试图解决的是另一件事：
 
-This skill must not reproduce, reconstruct, paraphrase, translate, or complete real CET exam content.
+> 把“刷题”变成“诊断—训练—批改—复盘—再训练”的闭环。
 
-All generated exercises should be labeled:
+## 数据基础：Codex 逐条分析 2015–2025 真题
+
+本 Skill 的规则来自一份版权安全版蒸馏报告。Codex 对本地四六级材料进行了逐份登记、分类和结构化解析，覆盖：
+
+- **2015–2025 年 CET-4 / CET-6 真题材料**；
+- 四级、六级各 **25 个考试年月场次**；
+- 全库共登记 **473 个文件**；
+- 识别 **217 个真题类文件**；
+- 四级识别 **116 个真题类文件**，其中 45 个优先文本来源被结构化解析；
+- 六级识别 **101 个真题类文件**，其中 36 个优先文本来源被结构化解析；
+- 题型覆盖 **写作、听力、阅读、翻译**。
+
+蒸馏过程只保留：
+
+- 题型结构；
+- 主题趋势；
+- 难度特征；
+- 文本长度范围；
+- 命题逻辑；
+- 干扰项类型；
+- 评分维度；
+- 原创题生成规则。
+
+它不保留、不输出、不发布任何真实真题正文、听力原文、阅读原文、作文题目、翻译原文、选项、答案或解析。
+
+## 它能做什么？
+
+启动后，Skill 会先问用户：
+
+> 你准备考四级还是六级？目前最想提升哪一项：写作、翻译、阅读、听力，还是整体规划？如果方便，也可以告诉我当前分数、目标分数和考试日期。
+
+然后根据用户选择进入不同训练模式。
+
+### 写作训练
+
+- 生成原创高频方向作文题；
+- 区分四级保分写作和六级高分论证；
+- 用户写完后，从内容、结构、逻辑、语法、词汇、句式、自然度、模板痕迹等维度评分；
+- 提供逐句修改、高分改写、可替换表达；
+- 根据用户问题生成个性化作文模板；
+- 鼓励用户重写，并对比第一版和第二版的提升。
+
+### 翻译训练
+
+- 生成原创 CET-style 中文翻译段落；
+- 四级偏文化、生活、校园、交通、健康、社会发展；
+- 六级偏文化遗产、生态文明、数字治理、教育公平、智能城市、公共服务；
+- 用户提交译文后，分析信息完整度、误译、中式英语、搭配、语序和表达自然度；
+- 提供标准译文、高分译文和可复用表达。
+
+### 阅读训练
+
+- 支持选词填空、长篇匹配、仔细阅读；
+- 按四级/六级自动控制文章长度、词汇难度、信息密度和推理强度；
+- 默认不提前给答案；
+- 用户作答后，解析定位依据、正确选项逻辑、干扰项错误类型和后续训练方向。
+
+### 听力训练
+
+- 生成原创短篇新闻、长对话、听力篇章、讲座/报道脚本；
+- 提供听前词汇，但不剧透答案；
+- 用户作答后，分析听力定位点、转折信息、原因结果、态度推理和干扰信息。
+
+### 复习规划
+
+- 根据当前分数、目标分数、考试日期和每日学习时间制定计划；
+- 区分短期冲刺和长期备考；
+- 安排写作/翻译输出、阅读/听力专项、词汇复习、模考节点和错题复盘。
+
+## 核心设计：不提前泄露答案
+
+为了让训练真正有效，Skill 默认采用延迟揭示答案：
+
+1. 先生成原创训练题；
+2. 等用户作答；
+3. 再给答案和详细解析；
+4. 诊断错因；
+5. 给下一步针对性训练。
+
+如果一边出题一边给答案，用户很容易“看懂了”，但并没有真正会做。这个 Skill 更强调真实训练感。
+
+## 与普通四六级资料的区别
+
+| 普通资料 | CET Skill |
+|---|---|
+| 以真题堆叠为主 | 以趋势蒸馏后的原创训练为主 |
+| 看答案解析 | 先作答，再解析 |
+| 泛泛讲技巧 | 根据用户错误诊断问题 |
+| 作文给万能模板 | 根据用户作文生成个性化模板 |
+| 翻译给参考答案 | 解释为什么这样翻、如何迁移表达 |
+| 阅读只讲正确选项 | 同时拆解干扰项套路 |
+| 计划固定 | 根据目标分数和剩余时间调整 |
+
+## 版权安全原则
+
+本项目不包含真实四六级真题内容，不发布真题库，不提供真题复刻，不还原原题，也不声称生成内容来自官方考试。
+
+所有训练材料均应标注：
 
 > 以下为原创 CET-style 训练，不是官方真题。
 
-## Files
+如果用户上传真题片段，Skill 只能进行高层次分析，不能补全、还原、扩写或重构完整真题。
 
-- `SKILL.md`: the main skill instruction file.
-- `README.zh-CN.md`: Chinese project introduction.
-- `examples/`: original usage examples.
-- `templates/`: reusable feedback templates.
+## 推荐仓库结构
 
-## Recommended Use
+```text
+cet-skill/
+├── SKILL.md
+├── README.md
+├── README.zh-CN.md
+├── docs/
+│   └── distillation_summary.md
+├── examples/
+│   ├── writing_example.md
+│   ├── translation_example.md
+│   ├── reading_example.md
+│   └── study_plan_example.md
+└── templates/
+    ├── writing_feedback_template.md
+    ├── translation_feedback_template.md
+    └── error_log_template.md
+```
 
-Publish only the skill instructions, templates, and original examples. Do not publish real papers, commercial answer explanations, listening scripts, or any intermediate files that may reconstruct actual exams.
+## 公开发布建议
+
+建议公开仓库只发布：
+
+- `SKILL.md`
+- `README.md`
+- `README.zh-CN.md`
+- 原创 examples
+- feedback templates
+- 不含真题内容的蒸馏说明
+
+不要上传：
+
+- 真题 PDF / Word；
+- 听力音频；
+- 商业解析；
+- 真题答案；
+- 可还原真题的中间文件；
+- 任何真实题干、选项、原文或解析。
+
+## 一句话介绍
+
+**CET Skill 是一个基于 Codex 对 2015–2025 全部四六级真题进行版权安全蒸馏后构建的原创训练教练：它不卖真题，而是把十年命题规律变成可练、可评、可复盘的 AI 备考系统。**
