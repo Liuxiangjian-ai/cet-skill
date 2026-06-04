@@ -1,4 +1,4 @@
-# CET Skill｜基于 2015–2025 四六级蒸馏的备考教练
+# CET Skill｜基于 2015–2025 四六级分析的备考助手
 
 ![四六级 Skill](https://img.shields.io/badge/四六级-Skill-10a37f)
 ![CET-4/6](https://img.shields.io/badge/CET--4%20%7C%20CET--6-专项训练-blue)
