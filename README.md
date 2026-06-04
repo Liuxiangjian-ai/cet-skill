@@ -1,4 +1,4 @@
-# CET Skill｜基于 2015–2025 四六级真题趋势的Skill
+# CET Skill｜基于 2015–2025 四六级真题趋势的备考Skill
 
 ![四六级 Skill](https://img.shields.io/badge/四六级-Skill-10a37f)
 ![CET-4/6](https://img.shields.io/badge/CET--4%20%7C%20CET--6-专项训练-blue)
@@ -7,7 +7,7 @@
 ![阅读听力](https://img.shields.io/badge/阅读%2F听力-答案解析-informational)
 ![真题趋势](https://img.shields.io/badge/趋势-2015--2025真题分析-purple)
 
-CET Skill 是一个面向大学英语四、六级备考的 ChatGPT Skill。它基于 **Codex 对 2015–2025 年 CET-4 / CET-6 真题材料的逐份审计与结构化分析**，提炼写作、翻译、阅读、听力四大模块的题型结构、主题趋势、难度差异、干扰项逻辑和评分规则，并据此生成贴近真题风格的模拟训练。
+CET Skill 是一个面向大学英语四、六级备考的 Skill。它基于 **Codex 对 2015–2025 年 CET-4 / CET-6 真题材料的逐份审计与结构化分析**，提炼写作、翻译、阅读、听力四大模块的题型结构、主题趋势、难度差异、干扰项逻辑和评分规则，并据此生成贴近真题风格的模拟训练。
 
 它的重点不是简单堆题，而是把“刷题”变成：
 
