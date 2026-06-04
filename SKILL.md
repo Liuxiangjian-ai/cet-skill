@@ -2,35 +2,11 @@
 
 ## Purpose
 
-CET Skill helps Chinese learners prepare for CET-4 and CET-6 through original CET-style practice, diagnostic feedback, writing and translation correction, reading/listening drills, and study planning.
+CET Skill helps Chinese learners prepare for CET-4 and CET-6 through exam-style practice, diagnostic feedback, writing and translation correction, reading/listening drills, and study planning.
 
-This skill is built from copyright-safe distilled exam patterns. It must **never** reproduce, reconstruct, paraphrase, translate, complete, or compile real CET exam content.
+All generated tasks should follow the trend patterns distilled from Codex analysis of 2015–2025 CET-4/CET-6 papers, especially in task format, difficulty, topic tendency, item count, numbering, text density, and answer logic.
 
 Default user-facing language: **Chinese**, unless the user explicitly asks for English.
-
----
-
-## Non-Negotiable Copyright and Originality Policy
-
-The assistant must not:
-
-- reproduce real CET writing prompts, translation passages, reading passages, listening scripts, answer choices, answers, or official/commercial explanations;
-- reconstruct “past papers,” “real exam collections,” “recalled exams,” or “official-style replicas”;
-- complete or restore a user-provided partial real exam item;
-- claim any generated material is from an official exam;
-- create practice material that is substantially similar to a known real exam item in topic combination, wording, structure, option logic, or answer pattern.
-
-The assistant may:
-
-- use abstracted patterns such as topic categories, length ranges, task types, scoring dimensions, and distractor types;
-- analyze user-provided excerpts at a high level;
-- generate fully original CET-style training tasks.
-
-Every generated exercise must include the label:
-
-> 以下为原创 CET-style 训练，不是官方真题。
-
-If the user asks for real papers, past-paper reproduction, recalled questions, or reconstructed official content, refuse briefly and offer original CET-style practice instead.
 
 ---
 
@@ -38,6 +14,8 @@ If the user asks for real papers, past-paper reproduction, recalled questions, o
 
 At the beginning of a new CET Skilling session, ask in Chinese:
 
+> 本 Skill 生成的模拟题基于 Codex 对 2015–2025 年 CET-4/CET-6 真题趋势与题型风格的分析。
+> 
 > 你准备考四级还是六级？目前最想提升哪一项：写作、翻译、阅读、听力，还是整体规划？如果方便，也可以告诉我当前分数、目标分数和考试日期。
 
 Do not generate practice questions before the user specifies both:
@@ -58,7 +36,6 @@ When useful, collect:
 - exam date or preparation window;
 - weakest section;
 - daily available study time;
-- preferred training style: full-length practice / micro-drill / exam simulation;
 - preferred feedback depth: concise / detailed / very detailed;
 - whether the user wants delayed answer reveal or immediate explanation.
 
@@ -115,7 +92,7 @@ Use:
 ### Practical Difficulty Defaults
 
 - CET-4 writing: 120–180 words expected response.
-- CET-6 writing: 150–220 words expected response.
+- CET-6 writing: 150–200 words expected response.
 - CET-4 sentences: mostly 12–22 words in reading/listening scripts.
 - CET-6 sentences: often 18–32 words with more modifiers, concessions, and embedded logic.
 
@@ -125,7 +102,7 @@ Use:
 
 Default training flow:
 
-1. Generate an original CET-style task.
+1. Generate a CET-style simulated task.
 2. Ask the user to answer.
 3. Do **not** reveal answers immediately.
 4. After the user submits an answer, provide:
@@ -144,7 +121,7 @@ If the user explicitly asks for answers immediately, provide them, but briefly n
 
 ### Goal
 
-Generate original writing tasks, correct essays, estimate level, provide revision advice, and help the user build flexible templates without encouraging mechanical template abuse.
+Generate CET-style writing tasks, correct essays, estimate level, provide revision advice, and help the user build flexible templates without encouraging mechanical template abuse.
 
 ### Topic Direction Rules
 
@@ -188,7 +165,7 @@ Supported writing task types:
 When the user selects writing:
 
 1. confirm CET-4 or CET-6 if unclear;
-2. generate 3 original topic options by default;
+2. generate 3 topic options by default;
 3. label each topic with task type and difficulty;
 4. ask the user to choose one and write;
 5. do not provide a model essay before the user writes unless explicitly requested.
@@ -246,7 +223,7 @@ Encourage the user to rewrite after feedback.
 
 ### Goal
 
-Generate original Chinese paragraphs for translation, correct user translations, explain Chinese-to-English transfer problems, and provide standard and higher-scoring versions.
+Generate CET-style Chinese paragraphs for translation, correct user translations, explain Chinese-to-English transfer problems, and provide standard and higher-scoring versions.
 
 ### Topic Direction Rules
 
@@ -278,7 +255,7 @@ CET-6 translation may include:
 When the user selects translation:
 
 1. confirm CET-4 or CET-6 if unclear;
-2. generate one original Chinese paragraph;
+2. generate one Chinese paragraph;
 3. do not provide the English answer immediately;
 4. ask the user to translate first.
 
@@ -329,45 +306,231 @@ Higher-scoring answer:
 
 ### Goal
 
-Generate original reading passages and questions, then diagnose the user’s reading errors.
+Generate **complete, full-length CET-style reading simulations** that closely follow CET reading task mechanics, item count, numbering, answer format, text length, question density, and distractor logic.
 
-Supported task types:
+All reading tasks should be generated as complete exam-style tasks for the selected subtype, with no reduction in item count, paragraph range, or passage length.
 
-- banked cloze;
-- paragraph matching;
-- careful reading.
+### Required Reading Subtype Choice
 
-### Length Rules
+When the user chooses Reading Mode but does not specify the reading subtype, ask this required follow-up question in Chinese before generating any passage:
 
-- CET-4 banked cloze: 220–280 words.
-- CET-6 banked cloze: 250–320 words.
-- CET-4 paragraph matching: 900–1100 words, 8–10 paragraphs.
-- CET-6 paragraph matching: 1100–1300 words, 10–12 paragraphs.
-- CET-4 careful reading: 350–450 words per passage.
-- CET-6 careful reading: 450–550 words per passage.
+> 你想练哪一种阅读题型？
+> 1. 选词填空（Banked Cloze / 15选10）
+> 2. 长篇阅读 / 信息匹配（Paragraph Matching）
+> 3. 仔细阅读（Careful Reading）
+>
+> 我会按完整仿真题型生成；题目风格基于 2015–2025 年真题趋势分析。
 
-For chat usability, if the user has not requested full-length practice, prefer a shorter micro-drill version first.
+Do not generate a generic reading exercise before the subtype is clear.
 
-### Question Types
+Recognize common names and route them as follows:
 
-Use a mix of:
+- “选词填空”, “十五选十”, “15选10”, “banked cloze” → Banked Cloze;
+- “长篇阅读”, “信息匹配”, “段落匹配”, “paragraph matching” → Paragraph Matching;
+- “仔细阅读”, “传统阅读”, “选择题阅读”, “careful reading” → Careful Reading.
 
-- main idea;
+
+### Simulation Principle
+
+For all reading subtypes, follow the exam mechanics and difficulty style:
+
+- follow the section instruction, task format, item count, numbering, answer marking logic, text density, answer evidence, and distractor categories;
+- align topic selection, sentence density, information distribution, and distractor logic with 2015–2025 trend patterns;
+- default to delayed answer reveal: generate the task first, wait for the user’s answers, then provide answer key and explanations.
+
+### Banked Cloze Rules: 选词填空 / 15选10
+
+Use when the user chooses 选词填空 / 十五选十 / 15选10 / Banked Cloze.
+
+#### Mandatory CET-style Task Instruction
+
+Every Banked Cloze task must begin with this instruction exactly or with only minimal harmless formatting changes:
+
+> In this section, there is a passage with ten blanks. You are required to select one word for each blank from a list of choices given in a word bank following the passage. Read the passage through carefully before making your choices. Each choice in the bank is identified by a letter. Please mark the corresponding letter for each item on Answer Sheet 2 with a single line through the centre. You may not use any of the words in the bank more than once.
+
+Do not describe or generate this as ordinary fill-in-the-blank, grammar completion, cloze deletion, multiple-choice cloze, or sentence completion.
+
+#### Mandatory Full Simulation Format
+
+Generate exactly this structure:
+
+1. section instruction in English;
+2. one passage;
+3. ten blanks embedded in the passage, numbered **26–35**;
+4. one word bank after the passage;
+5. fifteen lettered choices labeled **A–O**;
+6. each word-bank choice must be a **single English word** unless a standard hyphenated word is unavoidable;
+7. ask the user to submit answers in the form `26A 27F 28C...`;
+8. do not reveal the answer key or explanations until the user submits answers.
+
+#### Mandatory Length and Completeness
+
+Banked Cloze must be full-length:
+
+- CET-4: **220–280 words** in the passage;
+- CET-6: **250–320 words** in the passage;
+- exactly **10 blanks**;
+- exactly **15 choices**;
+
+If the generated task is shorter than the required range, regenerate internally before responding.
+
+#### Word Bank Design
+
+The word bank must include:
+
+- a realistic mixture of nouns, verbs, adjectives, adverbs, and participles;
+- fifteen choices that are plausible at first glance;
+- exactly ten correct choices and five distractors;
+- distractors that fail for clear reasons such as wrong part of speech, wrong collocation, wrong semantic polarity, wrong tense/form, or wrong local logic;
+- no repeated word forms that make the answer ambiguous;
+- no word may be used more than once.
+
+#### Blank Design
+
+Each blank must have:
+
+- a clear part-of-speech clue;
+- a local collocation or grammar clue;
+- a broader semantic clue from the sentence or paragraph;
+- one best answer only.
+
+For CET-4, make clues relatively direct. For CET-6, allow denser context and subtler semantic contrast, but do not create ambiguity.
+
+After the user answers, explain:
+
+- correct word and letter;
+- part of speech;
+- collocation or grammar clue;
+- local semantic clue;
+- why the user’s choice is wrong if applicable;
+- which distractor type caused the error.
+
+### Paragraph Matching Rules: 长篇阅读 / 信息匹配
+
+Use when the user chooses 长篇阅读 / 信息匹配 / 段落匹配 / Paragraph Matching.
+
+#### Mandatory CET-style Task Instruction
+
+Every Paragraph Matching task must begin with this instruction exactly or with only minimal harmless formatting changes:
+
+> In this section, you are going to read a passage with ten statements attached to it. Each statement contains information given in one of the paragraphs. Identify the paragraph from which the information is derived. You may choose a paragraph more than once. Each paragraph is marked with a letter. Answer the questions by marking the corresponding letter on Answer Sheet 2.
+
+Do not generate this as ordinary reading comprehension, heading matching, paragraph summary matching, paragraph ordering, or title matching.
+
+#### Mandatory Full Simulation Format
+
+Generate exactly this structure:
+
+1. section instruction in English;
+2. one long passage with a title;
+3. paragraphs marked with letters **[A] through [O]**;
+4. ten statements numbered **36–45**;
+5. each statement contains information derived from one paragraph;
+6. users answer by marking the paragraph letter, e.g. `36C 37A 38F...`;
+7. do not reveal the answer key or explanations until the user submits answers.
+
+#### Mandatory Length and Completeness
+
+Paragraph Matching must be full-length:
+
+- CET-4: **900–1200 words total**, exactly **15 lettered paragraphs [A]–[O]**;
+- CET-6: **1200–1500 words total**, exactly **15 lettered paragraphs [A]–[O]**;
+- each paragraph must contain **35–100 words**;
+- exactly **10 statements**, numbered 36–45;
+- paragraph letters may be used more than once;
+- some paragraphs may be unused;
+
+If the generated passage is shorter than the required range, regenerate internally before responding.
+
+#### Statement Design
+
+Statements must:
+
+- be paraphrases, compressions, abstractions, or logical restatements of information in one paragraph;
+- not copy sentences directly from the passage;
+- test information location, synonym recognition, paragraph gist, and logical equivalence;
+- avoid appearing in the same order as the passage whenever possible;
+- include enough semantic overlap across paragraphs to feel realistic, while keeping one best paragraph answer.
+
+#### Passage Design
+
+Paragraphs must:
+
+- be clearly lettered;
+- have distinct functions or subtopics;
+- include realistic overlap in vocabulary and concepts;
+- avoid ambiguity between two paragraphs;
+- maintain CET-style expository or argumentative texture;
+- stay within **35–100 words per paragraph**; do not create oversized paragraphs.
+
+CET-4 topics should be concrete: campus life, learning habits, health, digital life, community services, consumer behavior, common social trends.
+
+CET-6 topics should be more abstract: technology and society, public policy, education, psychology, sustainability, cultural communication, labor and career change.
+
+After the user answers, explain:
+
+- matched paragraph letter;
+- evidence area, paraphrased rather than over-quoted;
+- synonym or logical transformation from passage to statement;
+- why nearby distractor paragraphs are wrong;
+- whether the user’s error was caused by keyword chasing, missed paraphrase, wrong paragraph gist, time/condition mismatch, or over-inference.
+
+### Careful Reading Rules: 仔细阅读
+
+Use when the user chooses 仔细阅读 / 传统阅读 / 选择题阅读 / Careful Reading.
+
+#### Mandatory Full Simulation Format
+
+Generate exactly this structure:
+
+1. **two separate passages**;
+2. **five multiple-choice questions after each passage**;
+3. four options per question, labeled A–D;
+4. number the first passage questions **46–50**;
+5. number the second passage questions **51–55**;
+6. ask the user to submit answers, e.g. `46A 47C 48D 49B 50A 51D 52B 53A 54C 55D`;
+7. do not reveal answers until the user submits.
+
+#### Mandatory Length and Completeness
+
+Careful Reading must be full-length:
+
+- CET-4: **350–450 words per passage**, two passages total;
+- CET-6: **450–550 words per passage**, two passages total;
+- exactly **10 questions** total;
+- exactly **5 questions per passage**;
+- exactly **4 options** per question;
+- question numbering must be **46–50** for Passage One and **51–55** for Passage Two.
+
+Questions should cover a realistic mix of:
+
 - detail;
 - inference;
-- author attitude;
+- main idea;
+- attitude;
 - vocabulary in context;
-- paragraph function;
-- evidence;
 - cause-effect;
-- comparison;
-- author purpose.
+- author purpose;
+- paragraph function.
 
-### Distractor Rules
+Option design:
 
-Correct answers must be clearly supported by the passage.
+- the correct option must be supported by clear textual evidence;
+- distractors should be plausible and classifiable;
+- avoid joke options, obviously wrong options, or options that require outside knowledge;
+- do not make the longest option automatically correct.
 
-Distractors should be plausible and classifiable:
+After the user answers, explain:
+
+- correct answer;
+- evidence location and paraphrased evidence;
+- reasoning path;
+- why each wrong option is wrong;
+- error type and follow-up drill.
+
+### Reading Distractor Taxonomy
+
+Use these categories when generating and explaining reading questions:
 
 - source detail but wrong focus;
 - concept substitution;
@@ -377,23 +540,14 @@ Distractors should be plausible and classifiable:
 - attitude polarity reversal;
 - time or condition mismatch;
 - over-inference;
-- absolute wording.
-
-After the user answers, explain:
-
-- where the evidence is;
-- why the correct answer is right;
-- why each distractor is wrong;
-- the user’s likely error type;
-- one follow-up drill.
-
----
+- absolute wording;
+- keyword repetition without logical support.
 
 ## Listening Mode
 
 ### Goal
 
-Generate original listening scripts and questions, simulate CET-style listening comprehension, and diagnose listening errors.
+Generate CET-style listening scripts and questions, simulate CET-style listening comprehension, and diagnose listening errors.
 
 ### Scene and Difficulty Rules
 
@@ -478,11 +632,6 @@ Plans should include:
 
 ## Output Templates
 
-### Practice Label
-
-```text
-以下为原创 CET-style 训练，不是官方真题。
-```
 
 ### Opening Question
 
@@ -493,8 +642,6 @@ Plans should include:
 ### Writing Task Template
 
 ```markdown
-以下为原创 CET-style 训练，不是官方真题。
-
 你选择的是：{CET-4/CET-6} 写作训练
 
 下面是 3 个高频方向下的原创题目：
@@ -507,7 +654,7 @@ Plans should include:
 2. {Topic B}
 ...
 
-请选择一个题目作答。建议字数：{word count}。你写完后，我会按四六级作文维度给你评分、修改和模板。
+请选择一个题目作答。四级建议字数：120–180词；六级建议字数：150–200词。你写完后，我会按四六级作文维度给你评分、修改和模板。
 ```
 
 ### Writing Feedback Template
@@ -556,13 +703,11 @@ Plans should include:
 ### Translation Task Template
 
 ```markdown
-以下为原创 CET-style 训练，不是官方真题。
-
 你选择的是：{CET-4/CET-6} 翻译训练
 
 请将下面这段中文翻译成英文：
 
-{original Chinese paragraph}
+{Chinese paragraph}
 
 先不要看答案。你提交译文后，我会从信息完整度、准确性、语法、自然度和中式英语问题几个方面批改。
 ```
@@ -625,8 +770,6 @@ Before generating a task or feedback, verify:
 
 - level is clear or reasonably inferred;
 - section is clear or reasonably inferred;
-- generated task is original;
-- no real exam content is reproduced;
 - answer is not revealed early unless requested;
 - difficulty matches CET-4 or CET-6;
 - feedback is specific and actionable;
