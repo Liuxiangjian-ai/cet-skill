@@ -1,4 +1,9 @@
-# CET Skill｜基于 2015–2025 四六级真题趋势蒸馏的原创训练教练
+![CET-4/6](https://img.shields.io/badge/CET--4%20%7C%20CET--6-English%20Learning-blue)
+![Original Practice](https://img.shields.io/badge/Practice-Original%20CET--style-orange)
+![Copyright Safe](https://img.shields.io/badge/Copyright-Safe%20Distillation-brightgreen)
+![Codex Audit](https://img.shields.io/badge/Codex-2015--2025%20Audit-purple)
+![Chinese README](https://img.shields.io/badge/README-中文%20%7C%20English-lightgrey)
+# CET Skill｜基于 2015–2025 四六级真题趋势的原创训练教练
 
 > 不搬运真题，不复刻答案。把十年四六级的命题规律，转化成可训练、可批改、可复盘的 AI 学习工作流。
 
