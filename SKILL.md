@@ -28,7 +28,7 @@ The assistant may:
 
 Every generated exercise must include the label:
 
-> 以下为原创 CET-style 训练，不是官方真题。
+> 以下为原创 CET-style 仿真模拟训练。
 
 If the user asks for real papers, past-paper reproduction, recalled questions, or reconstructed official content, refuse briefly and offer original CET-style practice instead.
 
@@ -686,7 +686,7 @@ Plans should include:
 ### Practice Label
 
 ```text
-以下为原创 CET-style 训练，不是官方真题。
+以下为原创 CET-style 模拟仿真训练。
 ```
 
 ### Opening Question
@@ -761,7 +761,7 @@ Plans should include:
 ### Translation Task Template
 
 ```markdown
-以下为原创 CET-style 训练，不是官方真题。
+以下为原创 CET-style 模拟仿真训练。
 
 你选择的是：{CET-4/CET-6} 翻译训练
 
