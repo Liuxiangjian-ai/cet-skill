@@ -1,53 +1,113 @@
 # CET Skill
 ---
 name: cet-skill
-display_name: CET-4/CET-6 智能备考助手（CET Intelligent Preparation Assistant）
+
+display_name: 
+  zh-CN: CET-4/CET-6 智能备考助手
+  en: CET Intelligent Preparation Assistant
 
 description: >
   面向中国大学英语四级（CET-4）和六级（CET-6）考试的智能备考技能。
-  基于2015-2025年考试趋势与题型特点，支持原创模拟题生成、
-  作文批改与评分、翻译纠错、阅读与听力训练、错因分析以及个性化备考规划。
-  An AI-powered skill for College English Test Band 4 and Band 6 preparation,
-  including practice generation, writing evaluation, translation correction,
-  reading and listening training, and personalized study planning.
+  基于2015-2025年考试趋势、题型结构和语言学习规律，
+  支持原创四六级模拟训练生成、作文评分与优化、翻译纠错、
+  阅读与听力训练、错因诊断以及个性化学习规划。
+  Designed for College English Test Band 4 and Band 6 preparation,
+  providing original practice generation, writing evaluation,
+  translation correction, reading/listening training,
+  error diagnosis, and personalized study planning.
 
+version: 1.0.0
 
-author: Liuxiangjian-ai
+author:
+  name: Liuxiangjian-ai
+  repository: https://github.com/Liuxiangjian-ai/cet-skill
 
 license: MIT
+
 
 category:
   - education
   - language-learning
   - exam-preparation
+  - ai-agent
+
+
+capabilities:
+  - CET-4/CET-6 practice generation（四六级模拟训练生成）
+  - Writing scoring and revision suggestions（作文评分与修改建议）
+  - Translation evaluation and correction（翻译评价与纠错）
+  - Reading comprehension training（阅读专项训练）
+  - Listening comprehension training（听力专项训练）
+  - Error diagnosis and learning feedback（错误分析与学习反馈）
+  - Personalized study planning（个性化备考规划）
+
+
+target_users:
+  - Undergraduate students preparing for CET-4/CET-6
+  - Chinese university students improving exam-oriented English skills
+  - Learners requiring structured English training
+
 
 triggers:
-  - 用户希望准备大学英语四级（CET-4）或六级（CET-6）考试
-  - 用户要求生成四六级模拟题或专项训练
-  - 用户希望批改四六级作文并获得评分
-  - 用户希望进行四六级翻译训练或纠错
-  - 用户希望进行四六级阅读训练（选词填空、长篇阅读、仔细阅读）
-  - 用户希望进行四六级听力训练
-  - 用户需要制定四六级复习计划
+  - 用户希望准备大学英语四级（CET-4）考试
+  - 用户希望准备大学英语六级（CET-6）考试
+  - 用户要求生成四六级模拟题
+  - 用户要求进行四六级作文批改或评分
+  - 用户要求进行四六级翻译训练
+  - 用户要求进行四六级阅读训练
+  - 用户要求进行四六级听力训练
+  - 用户需要制定四六级学习计划
+
 
 keywords:
   - CET-4
   - CET-6
   - College English Test
-  - 大学英语四级
-  - 大学英语六级
-  - 四六级备考
-  - 英语学习
-  - 作文批改
-  - 翻译纠错
-  - 阅读训练
-  - 听力训练
-  - 学习规划
+  - 四六级
+  - 大学英语
+  - English learning
+  - writing evaluation
+  - translation correction
+  - reading practice
+  - listening practice
+  - study planning
 
-entrypoint: SKILL.md
 
-language:
+input_types:
+  - CET level preference (CET-4/CET-6)
+  - Training module selection
+  - User learning goals
+  - User-provided essays
+  - User-provided translations
+  - User answers and learning records
+
+
+output_types:
+  - Original CET-style practice materials
+  - Writing evaluation reports
+  - Translation correction reports
+  - Reading comprehension exercises
+  - Listening training materials
+  - Error diagnosis
+  - Personalized study plans
+
+
+constraints:
+  - Generate original practice materials rather than reproducing copyrighted exam content
+  - Do not claim generated materials are official CET examination questions
+  - Maintain CET-4/CET-6 difficulty characteristics
+  - Follow standardized exam formats
+  - Provide delayed answer disclosure unless users explicitly request answers
+  - Prioritize educational feedback over simple answer delivery
+
+
+supported_languages:
   - zh-CN
+  - en
+
+
+entrypoint:
+  file: SKILL.md
 ---
 ## Purpose
 
