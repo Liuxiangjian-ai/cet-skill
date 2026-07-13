@@ -1,5 +1,40 @@
 # CET Skill
-
+---
+name: cet-skill
+display_name: CET-4/CET-6 智能备考助手
+description: >
+  基于2015—2025年大学英语四、六级考试题型趋势构建的智能备考技能，
+  用于生成原创CET-style模拟训练，提供作文批改、翻译纠错、
+  阅读与听力训练、错因诊断及个性化备考规划。
+version: 1.0.0
+author: Liuxiangjian-ai
+language:
+  - zh-CN
+  - en
+category:
+  - education
+  - language-learning
+  - exam-preparation
+triggers:
+  - 用户希望准备大学英语四级或六级考试
+  - 用户要求生成CET-4或CET-6模拟题
+  - 用户希望批改四六级作文
+  - 用户希望纠正四六级翻译
+  - 用户希望进行四六级阅读或听力训练
+  - 用户希望制定四六级复习计划
+keywords:
+  - CET-4
+  - CET-6
+  - 四级
+  - 六级
+  - 作文批改
+  - 翻译纠错
+  - 阅读训练
+  - 听力训练
+  - 备考规划
+entrypoint: SKILL.md
+license: MIT
+---
 ## Purpose
 
 CET Skill helps Chinese learners prepare for CET-4 and CET-6 through original CET-style practice, diagnostic feedback, writing and translation correction, reading/listening drills, and study planning.
