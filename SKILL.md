@@ -1,39 +1,53 @@
 # CET Skill
 ---
 name: cet-skill
-display_name: CET-4/CET-6 智能备考助手
+display_name: CET-4/CET-6 智能备考助手（CET Intelligent Preparation Assistant）
+
 description: >
-  基于2015—2025年大学英语四、六级考试题型趋势构建的智能备考技能，
-  用于生成原创CET-style模拟训练，提供作文批改、翻译纠错、
-  阅读与听力训练、错因诊断及个性化备考规划。
-version: 1.0.0
+  面向中国大学英语四级（CET-4）和六级（CET-6）考试的智能备考技能。
+  基于2015-2025年考试趋势与题型特点，支持原创模拟题生成、
+  作文批改与评分、翻译纠错、阅读与听力训练、错因分析以及个性化备考规划。
+  An AI-powered skill for College English Test Band 4 and Band 6 preparation,
+  including practice generation, writing evaluation, translation correction,
+  reading and listening training, and personalized study planning.
+
+
 author: Liuxiangjian-ai
-language:
-  - zh-CN
-  - en
+
+license: MIT
+
 category:
   - education
   - language-learning
   - exam-preparation
+
 triggers:
-  - 用户希望准备大学英语四级或六级考试
-  - 用户要求生成CET-4或CET-6模拟题
-  - 用户希望批改四六级作文
-  - 用户希望纠正四六级翻译
-  - 用户希望进行四六级阅读或听力训练
-  - 用户希望制定四六级复习计划
+  - 用户希望准备大学英语四级（CET-4）或六级（CET-6）考试
+  - 用户要求生成四六级模拟题或专项训练
+  - 用户希望批改四六级作文并获得评分
+  - 用户希望进行四六级翻译训练或纠错
+  - 用户希望进行四六级阅读训练（选词填空、长篇阅读、仔细阅读）
+  - 用户希望进行四六级听力训练
+  - 用户需要制定四六级复习计划
+
 keywords:
   - CET-4
   - CET-6
-  - 四级
-  - 六级
+  - College English Test
+  - 大学英语四级
+  - 大学英语六级
+  - 四六级备考
+  - 英语学习
   - 作文批改
   - 翻译纠错
   - 阅读训练
   - 听力训练
-  - 备考规划
+  - 学习规划
+
 entrypoint: SKILL.md
-license: MIT
+
+language:
+  - zh-CN
 ---
 ## Purpose
 
